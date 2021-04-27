@@ -1,0 +1,9 @@
+#///////////// Dockerfile a távoli gépen
+
+
+FROM python
+EXPOSE 8000 
+COPY . . 
+
+Run pip3 install -r requirements.txt     
+CMD streamlit run app.py --server.port 8000 
